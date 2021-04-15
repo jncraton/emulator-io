@@ -25,6 +25,15 @@ We can interface with our device using the following memory locations:
 - 0x40 - Display mode register (set to 1 to swap memory buffer to display)
 - 0x41 - 0x71 - Words representing the characters on the screen as an int[3][16] array. The low bytes of each integer represents the character value in [ASCII](https://en.wikipedia.org/wiki/ASCII#Printable_characters).
 
+Marquee
+-------
+
+Your task is to create a program `marquee.asm` that creates a marquee text of your name:
+
+![output](media/output.gif)
+
+This should scroll a few times and then halt the CPU.
+
 Instruction Format
 ------------------
 
