@@ -23,7 +23,7 @@ The device is mapped to memory locations 64-127, so the overall memory map of ou
 We can interface with our device using the following memory locations:
 
 - 0x40 - Display mode register (set to 1 to swap memory buffer to display)
-- 0x41 - 0x71 - Words representing the characters on the screen as an int[3][16] array. The low bytes of each integer represents the character value in [ASCII](https://en.wikipedia.org/wiki/ASCII#Printable_characters).
+- 0x41 - 0x71 - Words representing the characters on the screen as an int[3][16] array. The low byte of each integer represents the character value in [ASCII](https://en.wikipedia.org/wiki/ASCII#Printable_characters).
 
 Marquee
 -------
@@ -75,8 +75,6 @@ This simple processor supports the following operations:
 13. LoadIndirect - Load the value stored in the memory location pointed to by the value in `src` into the `dst` register.
 14. StoreIndirect - Store the value stored in register `src` into the memory location pointed to by the value stored in `dst`.
 15. SleepImmediate - Sleep for `immediate` hundredths of seconds.
-
-It has no access to external memory or I/O.
 
 Running
 -------
