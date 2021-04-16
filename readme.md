@@ -17,7 +17,10 @@ The device is mapped to memory locations 64-127, so the overall memory map of ou
 | Range       | Type            |
 | ----------- | --------------- |
 | 0x00 - 0x3f | Main memory     |
-| 0x40 - 0x7f | Display memory  |
+| 0x40 - 0x4f | Display control |
+| 0x50 - 0x5f | Display line 1  |
+| 0x60 - 0x6f | Display line 2  |
+| 0x70 - 0x7f | Display line 3  |
 | 0x80 - 0xff | Main memory     |
 
 We can interface with our device using the following memory locations:

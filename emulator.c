@@ -46,7 +46,7 @@ void update_display(int32_t * memory) {
     // Prebuffer text to minimize flicker
     for (int y = 0; y < 3; y++) {
       for (int x = 0; x < 16; x++) {
-        c = (char)memory[65+y*16+x];
+        c = (char)memory[80+y*16+x];
         if (c == 0) { c = ' '; }
         lines[y][x] = c;
       }
