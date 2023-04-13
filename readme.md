@@ -94,14 +94,14 @@ The device is mapped to memory locations 64-127, so the overall memory map of ou
 
 | Range       | Type            |
 | ----------- | --------------- |
-| 0x00 - 0x3f | Program Memory  |
-| 0x40 - 0x7f | Display         |
+| 0x00 - 0x4e | Program Memory  |
+| 0x4f - 0x7f | Display         |
 | 0x80 - 0xff | Main memory     |
 
 We can interface with our device using the following memory locations:
 
-- 0x40 - Display mode register
-    - Set to 1 to swap 3x16 text memory buffer starting at 0x50 to display
+- 0x4f - Display update
+    - Set to 1 to copy 3x16 character back buffer located at 0x50-0x7f to display
 - 0x50 - 0x7f - Words representing the characters on the screen as a 3x16 integer array (int[3][16]). The low byte of each integer represents the character value in [ASCII](https://en.wikipedia.org/wiki/ASCII#Printable_characters).
 
 Marquee

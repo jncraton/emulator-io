@@ -108,8 +108,8 @@ void update_display(int32_t * memory) {
   char c;
 
   // Check the display mode
-  if (memory[64] == 1) {
-    memory[64] = 0;
+  if (memory[0x4f] == 1) {
+    memory[0x4f] = 0;
     // Prebuffer text to minimize flicker
     for (int y = 0; y < 3; y++) {
       for (int x = 0; x < 16; x++) {
