@@ -74,7 +74,8 @@ int main(int argc, char ** argv) {
   int32_t binary[256];
   char source[10000];
   FILE * input = fopen(argv[1], "rb");
-  fread(source, 1, 10000, input);
+  size_t len = fread(source, 1, 10000, input);
+  source[len] = 0; // Add null terminator
   fclose(input);
 
   memset(binary, 0, sizeof(binary));
